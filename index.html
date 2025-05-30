@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人笔记</title>
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 添加树叶飘落容器 -->
+    <div class="falling-leaves-container"></div>
+    
+    <!-- 添加浮动笔记元素 -->
+    <div class="floating-notes-container"></div>
+    
+    <!-- 添加旋转装饰元素 -->
+    <div class="rotating-decoration"></div>
+    
+    <!-- 添加左下角旋转装饰 -->
+    <div class="corner-decoration bottom-left">
+        <div class="rotating-element">
+            <i class="fas fa-feather"></i>
+        </div>
+    </div>
+    
+    <!-- 添加右上角悬浮装饰 -->
+    <div class="corner-decoration top-right">
+        <div class="floating-element">
+            <i class="fas fa-bookmark"></i>
+        </div>
+    </div>
+    
+    <!-- 添加中央背景波纹效果 -->
+    <div class="ripple-background">
+        <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+        <div class="circle large shade3"></div>
+        <div class="circle medium shade4"></div>
+        <div class="circle small shade5"></div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-feather-alt"></i> 我的个人笔记</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="#"><i class="fas fa-folder"></i> 分类</a></li>
+                    <li><a href="#"><i class="fas fa-tags"></i> 标签</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> 搜索</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> 关于</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside id="notes-sidebar">
+            <h2><i class="fas fa-bookmark"></i> 笔记列表</h2>
+            <hr class="decorative-divider">
+            <ul id="notes-list">
+                <!-- Note items will be populated by JavaScript -->
+            </ul>
+            <div class="sidebar-decoration">
+                <i class="fas fa-pen-fancy"></i>
+            </div>
+        </aside>
+
+        <main id="note-content-area">
+            <article id="current-note">
+                <h2><i class="fas fa-crown"></i> 欢迎</h2>
+                <hr class="decorative-divider">
+                <div class="welcome-illustration-container">
+                    <img src="./images/new_welcome_illustration.png" alt="温馨书房插图" id="welcome-image" loading="lazy" onerror="this.onerror=null;this.src='./images/welcome_illustration.png';">
+                    <div class="image-decoration top-left"></div>
+                    <div class="image-decoration top-right"></div>
+                    <div class="image-decoration bottom-left"></div>
+                    <div class="image-decoration bottom-right"></div>
+                </div>
+                <p>请从左侧选择一篇笔记进行阅读，或者稍后我会为您填充一些示例笔记。</p>
+                <hr class="decorative-divider">
+                <div class="quote-container">
+                    <blockquote>
+                        <p><i class="fas fa-quote-left"></i> 知识是一座宝库，而实践是开启它的钥匙。 <i class="fas fa-quote-right"></i></p>
+                        <cite>— 托马斯·富勒</cite>
+                    </blockquote>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-decoration left"></div>
+        <p>&copy; 2024 个人笔记 <i class="fas fa-heart"></i> 用心记录每一刻</p>
+        <div class="footer-decoration right"></div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
